@@ -1,0 +1,46 @@
+{
+  "name": "@dan-humpherson/govuk-react-adapter",
+  "version": "0.1.29",
+  "type": "module",
+  "main": "./dist/govuk-react-adapter.cjs",
+  "module": "./dist/govuk-react-adapter.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/govuk-react-adapter.js",
+      "require": "./dist/govuk-react-adapter.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.build.json && vite build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.12.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^6.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "govuk-frontend": "^6.1.0"
+  }
+}
