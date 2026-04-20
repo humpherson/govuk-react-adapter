@@ -1,6 +1,6 @@
 {
   "name": "@dan-humpherson/govuk-react-adapter",
-  "version": "0.1.29",
+  "version": "0.1.30",
   "type": "module",
   "main": "./dist/govuk-react-adapter.cjs",
   "module": "./dist/govuk-react-adapter.js",
