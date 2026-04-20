@@ -67,7 +67,14 @@ export function Button(props: ButtonProps) {
   const classes = getClassNames({ variant, isStart, className });
 
   if ("href" in props && props.href) {
-    const { href, ...anchorProps } = props;
+    const {
+      href,
+      children: ignoredChildren,
+      variant: ignoredVariant,
+      isStart: ignoredIsStart,
+      className: ignoredClassName,
+      ...anchorProps
+    } = props;
 
     return (
       <a
@@ -85,7 +92,15 @@ export function Button(props: ButtonProps) {
   }
 
   const buttonOnlyProps = props as ButtonAsButtonProps;
-  const { type = "submit", disabled = false, ...buttonProps } = buttonOnlyProps;
+  const {
+    type = "submit",
+    disabled = false,
+    children: ignoredChildren,
+    variant: ignoredVariant,
+    isStart: ignoredIsStart,
+    className: ignoredClassName,
+    ...buttonProps
+  } = buttonOnlyProps;
 
   return (
     <button

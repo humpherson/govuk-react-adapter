@@ -110,6 +110,26 @@ export default function App() {
 
 ---
 
+### Supported input/component names
+
+Prefer these canonical exports:
+
+- `TextInput`
+- `Radios`
+- `Checkboxes`
+- `DateInput`
+- `SummaryList`
+- `Button`
+
+Compatibility aliases are also exported for AI generation tools:
+
+- `GovUkInput` → `TextInput`
+- `GovUkRadios` → `Radios`
+- `GovUkCheckboxes` → `Checkboxes`
+- `GovUkDateInput` → `DateInput`
+- `GovUkSummaryList` → `SummaryList`
+- `GovUkButton` → `Button`
+
 ## 🧩 Core Concepts
 
 ### 1. Page patterns (PRIMARY)
@@ -161,6 +181,15 @@ Grouped inputs must use:
 ```
 
 ---
+
+## ⚠️ Important composition rules for AI generation
+
+- Pass service-level chrome such as `serviceName` through `pageTemplateProps`, not directly to page pattern components.
+- Use `backLinkHref` with page wrappers and `href` with `BackLink`. Do not use click handlers for navigation props.
+- Use `formProps` on `GovUkQuestionPage` and `GovUkCheckAnswersPage`. Do not nest your own `<form>` element inside these wrappers.
+- `GovUkCheckAnswersPage` expects `sections`, each containing structured `rows`.
+- Prefer href-based navigation in generated prototypes.
+- Do not create ad-hoc two-column page layouts unless the adapter explicitly provides a layout primitive for them.
 
 ## 🧪 Running the test app
 

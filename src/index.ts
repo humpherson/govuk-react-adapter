@@ -37,3 +37,14 @@ export * from "./components/Tabs";
 export * from "./components/Tag";
 export * from "./components/TaskList";
 export * from "./components/Textarea";
+
+// Compatibility aliases for AI generation systems that prefer GovUk* names
+export {
+  Button as GovUkButton,
+  ButtonGroup as GovUkButtonGroup,
+} from "./components/Button";
+export { Checkboxes as GovUkCheckboxes } from "./components/Checkboxes";
+export { DateInput as GovUkDateInput } from "./components/DateInput";
+export { Radios as GovUkRadios } from "./components/Radios";
+export { SummaryList as GovUkSummaryList } from "./components/SummaryList";
+export { TextInput as GovUkInput } from "./components/TextInput";
